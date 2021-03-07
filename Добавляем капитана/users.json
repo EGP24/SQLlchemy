@@ -1,0 +1,38 @@
+[
+  {
+    "surname": "Scott",
+    "name": "Ridley",
+    "age": 21,
+    "position": "captain",
+    "speciality": "research engineer",
+    "address": "module_1",
+    "email": "scott_chief@mars.org"
+  },
+  {
+    "surname": "Переверза",
+    "name": "Влад",
+    "age": 15,
+    "position": "real_keks",
+    "speciality": "some profession",
+    "address": "module_1",
+    "email": "vlados_chikendos@mars.org"
+  },
+  {
+    "surname": "Фесенко",
+    "name": "Артём",
+    "age": 17,
+    "position": "loshara))",
+    "speciality": "another profession",
+    "address": "module_1",
+    "email": "artem_lox)))@mars.org"
+  },
+  {
+    "surname": "Соловьёв",
+    "name": "Саша",
+    "age": 16,
+    "position": "real_keks",
+    "speciality": "third profession",
+    "address": "module_1",
+    "email": "sasha_soloviev@mars.org"
+  }
+]
