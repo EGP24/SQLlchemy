@@ -19,6 +19,11 @@ def empty():
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     form = RegisterForm()
+    context = {
+        'title': 'Регистрация',
+        'form': form
+    }
+    
     if form.validate_on_submit():
         if form.hashed_password.data == form.repeat_password.data:
             db_sess = db_session.create_session()
@@ -28,9 +33,9 @@ def register():
                 setattr(user, key, getattr(form, key).data)
             db_sess.add(user)
             db_sess.commit()
-            return render_template('register.html', title='Регистрация', form=form)
-        return render_template('register.html', message='Different passwords', title='Регистрация', form=form)
-    return render_template('register.html', title='Регистрация', form=form)
+            return render_template('register.html', **context)
+        return render_template('register.html', message='Different passwords', **context)
+    return render_template('register.html', **context)
 
 
 if __name__ == '__main__':
