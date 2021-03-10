@@ -33,8 +33,8 @@ def register():
                 setattr(user, key, getattr(form, key).data)
             db_sess.add(user)
             db_sess.commit()
-            return render_template('register.html', **context)
-        return render_template('register.html', message='Different passwords', **context)
+         else:
+            context['message'] = 'Разные пароли'
     return render_template('register.html', **context)
 
 
