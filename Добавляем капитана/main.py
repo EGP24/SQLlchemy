@@ -9,7 +9,7 @@ with open('users.json', encoding='utf8') as file:
 
 for user in data:
     db_user = User()
-    for key, value in dict(user).items():
+    for key, value in user.items():
         setattr(db_user, key, value)
     db_sess.add(db_user)
 db_sess.commit()
